@@ -8,6 +8,9 @@ class Superhero:
     def use_power(self):
         return f"{self.name} uses {self.power}!"
 
+    def introduce(self):
+        return f"I am {self.name}, also known as {self.real_name}, protecting {self.city}!"
+
     def __str__(self):
         return f"Name: {self.name}, Real Name: {self.real_name}, Power: {self.power}, City: {self.city}"
 
@@ -25,13 +28,13 @@ class FlyingSuperhero(Superhero):
 
     def __str__(self):
         return f"{super().__str__()}, Flight Speed: {self.flight_speed} mph"
-    
-   
+
+
+# Example usage
 batman = Superhero("Batman", "Bruce Wayne", "Gadgets and Intelligence", "Gotham")
 print(batman.introduce())
 print(batman.use_power())
 print(batman)
-
 
 superman = FlyingSuperhero("Superman", "Clark Kent", "Super Strength", "Metropolis", 500)
 print(superman.introduce())
